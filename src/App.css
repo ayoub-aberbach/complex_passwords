@@ -76,17 +76,18 @@ h2 {
 }
 
 .copy-result {
-    background-color: transparent;
+    background-color: #06b6d4;
     border: none;
-    padding: 10px 10px 10px 10px;
+    padding: 7px 7px 7px 7px;
     border-radius: 50%;
     position: absolute;
     right: 0 !important;
     margin-right: 5px;
     font-weight: 700;
     cursor: pointer;
-    z-index: 50;
+    z-index: 999;
     font-size: 0.8rem;
+    outline: none !important;
 }
 
 .share-result {
@@ -103,6 +104,7 @@ h2 {
     font-size: 1rem;
     letter-spacing: 1px;
     text-transform: uppercase;
+    outline: none !important;
 }
 
 .share-result:hover {
@@ -124,7 +126,7 @@ input[type="text"] {
 .generate-btn {
     background-image: var(--gradient);
     padding: 10px 10px 8px 10px;
-    border: none;
+    border: 0 !important;
     font-weight: 600;
     color: white;
     display: block;
@@ -134,6 +136,7 @@ input[type="text"] {
     font-size: 1.2rem;
     letter-spacing: 3px;
     margin: auto;
+    outline: none !important;
 }
 
 .generate-btn:hover {
@@ -148,4 +151,8 @@ input[type="text"] {
         padding: 20px 15px;
         margin: 0 auto;
     }
+}
+
+button {
+    -webkit-tap-highlight-color: transparent;
 }
