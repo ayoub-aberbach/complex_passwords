@@ -40,7 +40,6 @@ function App() {
     return (
         <>
             <div id="box">
-                <h2>Password Generator</h2>
                 <div className="container">
                     <div className="result-container">
                         <input
