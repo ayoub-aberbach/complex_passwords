@@ -13,6 +13,7 @@ function App() {
 
     const buffer = new ArrayBuffer(64);
     const rand_numbers = new BigUint64Array(buffer, 8, 4);
+
     self.crypto.getRandomValues(rand_numbers);
 
     const symbs = import.meta.env.VITE_SYMBS;
@@ -26,9 +27,9 @@ function App() {
         const rand_final = rand_numbers[Math.floor(Math.random() * 4)].toString(36);
         let mix_all =
             alpha_lower.slice(Math.floor(Math.random() * 26)).toString()
-            + symbs.slice(Math.floor(Math.random() * 33)).toString()
-            + alpha_upper.slice(Math.floor(Math.random() * 26)).toString()
-            + numbers.slice(Math.floor(Math.random() * 10)).toString();
+            + symbs.slice(Math.floor(Math.random() * 26)).toString()
+            + numbers.slice(Math.floor(Math.random() * 10)).toString()
+            + alpha_upper.slice(Math.floor(Math.random() * 26)).toString();
 
         for (let index = 1; index < 25; index++) {
             combineRand += mix_all[parseInt(rand_final[index % rand_final.length], 36) % mix_all.length]

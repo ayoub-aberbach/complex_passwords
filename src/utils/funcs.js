@@ -7,7 +7,7 @@ export async function writeClipboardText(result) {
         if (!result) toast.warning('NOTHING TO COPY')
 
         await navigator.clipboard.writeText(result);
-        toast.success('COPIED');
+        toast.success('COPIED TO CLIPBOARD');
     } catch (error) {
         console.error(error.message);
     }
