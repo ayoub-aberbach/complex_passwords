@@ -135,9 +135,9 @@ input[type="text"] {
 @media only screen and (max-width: 600px) {
     .container {
         display: flex !important;
-        width: 315px !important;
+        width: 310px !important;
         max-width: 100% !important;
-        padding: 20px;
+        padding: 20px 10px;
         margin: 0 auto !important;
     }
 
